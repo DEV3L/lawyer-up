@@ -1,0 +1,61 @@
+# Site Information
+site_name: "L@wyer Up"
+site_url: https://dev3l.github.io/lawyer-up/
+site_author: "Justin Beall"
+site_description: "An AI-powered platform simplifying access to justice with affordable, efficient, and intuitive legal tools."
+
+# Theme Configuration
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: brown
+
+  font:
+    header: "Dank Mono"
+    text: Poppins
+  favicon: "images/favicon.png"
+  logo: "images/logo.png"
+
+# Navigation Structure
+nav:
+  - Home: index.md
+  - About: about.md
+  - Product: product.md
+  - Features: features.md
+  - Contact: contact.md
+
+# Plugins
+plugins:
+  - search
+  - macros
+  - ultralytics:
+      verbose: true
+      enabled: true
+      add_desc: true
+      add_image: true
+      add_keywords: true
+      add_json_ld: true
+      add_css: true
+  - minify_html
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - footnotes
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/contact.css
+  - stylesheets/carousel.css
+  - stylesheets/hero-banner.css
+
+extra_javascript:
+  - overrides/carousel.js
+  - overrides/footer.js

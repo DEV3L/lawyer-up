@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a; /* Dark background */
+  --foreground: #ededed; /* Light text */
+}
+
+@font-face {
+  font-family: "Dank Mono";
+  src: url("/fonts/DankMono-Regular.woff2") format("woff2"),
+    url("/fonts/DankMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DankMonoBold";
+  src: url("/fonts/DankMono-Bold.woff2") format("woff2"),
+    url("/fonts/DankMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Dank Mono Italic";
+  src: url("/fonts/DankMono-Italic.woff2") format("woff2"),
+    url("/fonts/DankMono-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Poppins, sans-serif;
+}
+
+.monospace {
+  font-family: "Dank Mono", monospace;
+}
+
+.italic {
+  font-family: "Dank Mono", monospace;
+  font-style: italic;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Card Vault */
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.card-container {
+  display: flex;
+  overflow: hidden; /* Hide overflow to ensure only visible cards are shown */
+  justify-content: center; /* Center the cards */
+}
+
+.card {
+  flex: 0 0 33.33%; /* Ensure each card takes up one-third of the container */
+  max-width: 33.33%;
+  transition: transform 0.5s ease; /* Smooth transition for card animations */
+}
+
+.card.is-center {
+  transform: scale(1.1); /* Slightly enlarge the center card */
+  z-index: 10; /* Bring the center card to the front */
+}
+
+/* Carousel */
+
+.flex {
+  display: flex;
+  justify-content: center; /* Center the cards */
+  align-items: center;
+}
+
+.z-10 {
+  transform: scale(1.1); /* Slightly enlarge the center card */
+  transition: transform 0.3s ease;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left-0 {
+  left: -20px; /* Adjust this value to move the button further left */
+}
+
+.right-0 {
+  right: -20px; /* Adjust this value to move the button further right */
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+.transition-transform {
+  transition: transform 0.2s;
+}
